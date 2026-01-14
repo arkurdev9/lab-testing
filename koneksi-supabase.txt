@@ -1,0 +1,22 @@
+env.local :
+
+NEXT_PUBLIC_labSUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmZWZrbGNmY3V4aW9sam16dXZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxMDY5NzEsImV4cCI6MjA4MzY4Mjk3MX0.6y0C9ifnQWoJ0WHrHEkpetryh7X2fsoqsF0BM-JdTkY"
+NEXT_PUBLIC_labSUPABASE_PUBLISHABLE_KEY="sb_publishable_VsUKrgjTTayXltLhXwKqGg_fAYnMGxf"
+NEXT_PUBLIC_labSUPABASE_URL="https://yfefklcfcuxioljmzuvc.supabase.co"
+POSTGRES_DATABASE="postgres"
+POSTGRES_HOST="db.yfefklcfcuxioljmzuvc.supabase.co"
+POSTGRES_PASSWORD="XfbGVRG8PYKgKvRu"
+POSTGRES_PRISMA_URL="postgres://postgres.yfefklcfcuxioljmzuvc:9UuAuQUfeX1bQoE4@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?sslmode=require&pgbouncer=true"
+POSTGRES_URL="postgres://postgres.yfefklcfcuxioljmzuvc:9UuAuQUfeX1bQoE4@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x"
+POSTGRES_URL_NON_POOLING="postgres://postgres.yfefklcfcuxioljmzuvc:9UuAuQUfeX1bQoE4@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres?sslmode=require"
+POSTGRES_USER="postgres"
+SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmZWZrbGNmY3V4aW9sam16dXZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgxMDY5NzEsImV4cCI6MjA4MzY4Mjk3MX0.6y0C9ifnQWoJ0WHrHEkpetryh7X2fsoqsF0BM-JdTkY"
+SUPABASE_JWT_SECRET="FUNPPk2qYF4c/FohdEi14vjQieF27maqCcgZi1NZZNJkBL1lkX3pWz/Gk/i/YZy2K+Uz23UpCi9AHlNVXzPdUg=="
+SUPABASE_PUBLISHABLE_KEY="sb_publishable_VsUKrgjTTayXltLhXwKqGg_fAYnMGxf"
+SUPABASE_SECRET_KEY="sb_secret_QqLP55cjBbj4uhEIfNPGxw_G-j_CSPE"
+SUPABASE_SERVICE_ROLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmZWZrbGNmY3V4aW9sam16dXZjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2ODEwNjk3MSwiZXhwIjoyMDgzNjgyOTcxfQ.N_2qGvc4XHLYb3iDfK_mjnv9x8GttXBABlvaPgpyAH0"
+SUPABASE_URL="https://yfefklcfcuxioljmzuvc.supabase.co"
+
+#Koneksi string
+koneksi string : postgresql://postgres:[XfbGVRG8PYKgKvRu]@db.yfefklcfcuxioljmzuvc.supabase.co:5432/postgres
+password database : XfbGVRG8PYKgKvRu

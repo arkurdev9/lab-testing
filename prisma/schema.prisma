@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Customer {
+  id             Int      @id @default(autoincrement())
+  nama           String
+  alamat         String?
+  kontak         String?
+  jenis_instansi String // "Perorangan" / "Perusahaan"
+  createdAt      DateTime @default(now())
+
+  tests Test[]
+}
+
+model TestType {
+  id             Int         @id @default(autoincrement())
+  nama_jenis_uji String      @unique
+  deskripsi      String?
+  parameters     Parameter[]
+}
+
+model Parameter {
+  id             Int      @id @default(autoincrement())
+  nama_parameter String
+  satuan         String?
+  harga          Float
+  aktif          Boolean  @default(true)
+
+  testType   TestType @relation(fields: [testTypeId], references: [id])
+  testTypeId Int
+
+  tests Test[]
+}
+
+model Test {
+  id                             Int       @id @default(autoincrement())
+  tanggal_registrasi           DateTime  @default(now())
+  tanggal_pelaksanaan_lapangan DateTime?
+  lokasi_pengujian             String?
+  status_persetujuan           String    @default("Pending") // "Pending", "Disetujui", "Ditolak"
+  total_biaya                  Float
+  link_surat_tugas             String?
+  keterangan                   String?
+
+  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId Int
+
+  admin    User? @relation("AdminTests", fields: [adminId], references: [id])
+  adminId  Int?
+
+  assigned_field_officer User? @relation("FieldOfficerTests", fields: [assignedFieldOfficerId], references: [id])
+  assignedFieldOfficerId Int?
+
+  parameters Parameter[]
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  nama_lengkap  String
+  email         String   @unique
+  password_hash String
+  role          String   // "Admin", "Petugas Lapangan", "Kepala Lab"
+  aktif         Boolean  @default(true)
+  createdAt     DateTime @default(now())
+
+  adminTests        Test[] @relation("AdminTests")
+  fieldOfficerTests Test[] @relation("FieldOfficerTests")
+}
