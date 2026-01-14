@@ -40,10 +40,10 @@ export default async function AdminDashboard() {
   // Fungsi untuk logout
   const handleSignOut = async () => {
     'use server';
-    
+
     const cookieStore = await cookies();
     cookieStore.delete('current_user');
-    
+
     redirect('/auth/login');
   };
 
@@ -96,6 +96,14 @@ export default async function AdminDashboard() {
                       <div className="mt-1 text-sm font-medium text-gray-500">Total Users</div>
                     </div>
                   </div>
+                </div>
+                <div className="mt-8">
+                  <a
+                    href="/admin/users"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Manage Users
+                  </a>
                 </div>
               </div>
             </div>

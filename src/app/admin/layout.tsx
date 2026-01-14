@@ -27,8 +27,36 @@ export default async function AdminLayout({
   }
 
   return (
-    <div>
-      {children}
+    <div className="min-h-screen bg-gray-100">
+      <div className="flex">
+        {/* Sidebar */}
+        <div className="w-64 bg-white shadow-md">
+          <div className="p-4">
+            <h2 className="text-xl font-semibold text-gray-800">Admin Panel</h2>
+          </div>
+          <nav className="mt-5 px-2">
+            <div className="space-y-1">
+              <a
+                href="/admin/dashboard"
+                className="flex items-center px-4 py-2 text-base font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-100"
+              >
+                Dashboard
+              </a>
+              <a
+                href="/admin/users"
+                className="flex items-center px-4 py-2 text-base font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-100"
+              >
+                User Management
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-1">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
