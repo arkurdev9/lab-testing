@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Sidebar from '@/components/Sidebar';
 
-export default async function AdminLayout({
+export default async function UserManagementLayout({
   children,
 }: {
   children: React.ReactNode;
